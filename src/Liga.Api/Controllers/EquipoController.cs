@@ -6,5 +6,6 @@ namespace Liga.Api.Controllers
     [ApiController]
     public class EquipoController : ControllerBase
     {
+
     }
 }
