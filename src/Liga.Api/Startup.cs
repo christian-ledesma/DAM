@@ -1,3 +1,5 @@
+using Liga.Api.Repositories;
+using Liga.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,10 +23,24 @@ namespace Liga.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen();
 
             Configuration.GetSection("ConnectionStrings").Bind(AppSettings);
 
-            services.AddSingleton<AppSettings>(AppSettings);
+            services.AddSingleton(AppSettings);
+
+            AddServices(services);
+            AddRepositories(services);
+        }
+
+        public void AddServices(IServiceCollection services)
+        {
+            services.AddScoped<IEquipoService, EquipoService>();
+        }
+
+        public void AddRepositories(IServiceCollection services)
+        {
+            services.AddScoped<IEquipoRepository, EquipoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +48,11 @@ namespace Liga.Api
         {
             if (env.IsDevelopment())
             {
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Liga Manager API v1");
+                });
                 app.UseDeveloperExceptionPage();
             }
 

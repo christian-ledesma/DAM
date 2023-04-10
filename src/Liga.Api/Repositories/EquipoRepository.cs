@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Liga.Api.Repositories
 {
-    public class EquipoRepository
+    public class EquipoRepository : IEquipoRepository
     {
-        private const string TABLE = "";
+        private const string TABLE = "Equipos";
         private readonly AppSettings _settings;
 
         public EquipoRepository(AppSettings settings)
