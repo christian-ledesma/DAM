@@ -32,5 +32,10 @@ namespace Liga.Api.Services
             return jugadores;
         }
 
+        public async Task<IEnumerable<Jugador>> GetAll()
+        {
+            var list = await _jugadorRepository.GetPlayers();
+            return list;
+        }
     }
 }

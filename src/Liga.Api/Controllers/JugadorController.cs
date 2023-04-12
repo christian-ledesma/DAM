@@ -22,7 +22,14 @@ namespace Liga.Api.Controllers
         }
 
         [HttpGet]
-        //[Route("{id}")]
+        public async Task<IActionResult> Get()
+        {
+            var list = await _jugadorService.GetAll();
+            return Ok(list);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
         public async Task<IActionResult> GetById([FromQuery] int teamId)
         {
             var jugadores = await _jugadorService.GetAllPlayersById(teamId);
@@ -36,7 +43,7 @@ namespace Liga.Api.Controllers
             {
                 await _jugadorService.CreatePlayer(jugador);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _response.Success = false;
                 _response.Message = e.Message;
@@ -60,3 +67,6 @@ namespace Liga.Api.Controllers
         }
     }
 }
+
+    
+
