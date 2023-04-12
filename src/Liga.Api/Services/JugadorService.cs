@@ -20,10 +20,17 @@ namespace Liga.Api.Services
             return player;
         }
 
+        public async Task<int> UpdatePlayer(Jugador jugador)
+        {
+            var player = await _jugadorRepository.UpdatePlayer(jugador);
+            return player;
+        }
+
         public async Task<IEnumerable<Jugador>> GetAllPlayersById(int teamId)
         {
             var jugadores = await _jugadorRepository.GetPlayersByTeam(teamId);
             return jugadores;
         }
+
     }
 }

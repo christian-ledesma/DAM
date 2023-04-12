@@ -9,5 +9,6 @@ namespace Liga.Api.Repositories
     {
         Task<IEnumerable<Jugador>> GetPlayersByTeam(int teamId);
         Task<int> CreatePlayer(Jugador jugador);
+        Task<int> UpdatePlayer(Jugador jugador);
     }
 }

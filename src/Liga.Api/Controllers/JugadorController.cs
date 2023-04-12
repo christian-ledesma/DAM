@@ -43,5 +43,20 @@ namespace Liga.Api.Controllers
             }
             return _response;
         }
+
+        [HttpPut]
+        public async Task<object> Put([FromBody] Jugador jugador)
+        {
+            try
+            {
+                await _jugadorService.UpdatePlayer(jugador);
+            }
+            catch (Exception ex)
+            {
+                _response.Success = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
     }
 }

@@ -36,5 +36,15 @@ namespace Liga.Api.Repositories
                 ($"INSERT INTO {TABLE} VALUES(@EquipoId, @Nombre, @Valor, @Nacionalidad, @Edad, @Posicion)", jugador);
             return player;
         }
+
+        public async Task<int> UpdatePlayer(Jugador jugador)
+        {
+            using var connection = new SqlConnection(_settings.EducationServer);
+            connection.Open();
+
+            var player = await connection.ExecuteAsync
+                ($"UPDATE {TABLE} SET VALOR = @Valor, EDAD = @Edad WHERE Id = @Id", jugador);
+            return player;
+        }
     }
 }
