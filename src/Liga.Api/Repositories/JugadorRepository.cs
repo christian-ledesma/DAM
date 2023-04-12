@@ -55,5 +55,14 @@ namespace Liga.Api.Repositories
                 ($"UPDATE {TABLE} SET VALOR = @Valor, EDAD = @Edad WHERE Id = @Id", jugador);
             return player;
         }
+
+        public async Task<IEnumerable<Jugador>> GetPlayers()
+        {
+            using var connection = new SqlConnection(_settings.EducationServer);
+            connection.Open();
+
+            var list = await connection.QueryAsync<Jugador>($"SELECT * FROM {TABLE}");
+            return (IEnumerable<Jugador>)list;
+        }
     }
 }
