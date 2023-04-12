@@ -58,5 +58,20 @@ namespace Liga.Api.Controllers
             }
             return _response;
         }
+
+        [HttpDelete]
+        public async Task<bool> Delete([FromQuery] int id)
+        {
+            try
+            {
+                await _jugadorService.DeletePlayer(id);                
+            }
+            catch(Exception ex)
+            {
+                _response.Success = false;
+                _response.Message = ex.Message;
+            }
+            return true;
+        }
     }
 }

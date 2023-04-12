@@ -26,6 +26,13 @@ namespace Liga.Api.Services
             return player;
         }
 
+
+        public async Task<int> DeletePlayer(int playerId)
+        {
+            var player = await _jugadorRepository.DeletePlayerById(playerId);
+            return player;
+        }
+
         public async Task<IEnumerable<Jugador>> GetAllPlayersById(int teamId)
         {
             var jugadores = await _jugadorRepository.GetPlayersByTeam(teamId);

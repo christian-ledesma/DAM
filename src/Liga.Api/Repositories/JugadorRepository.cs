@@ -18,6 +18,15 @@ namespace Liga.Api.Repositories
             _settings = settings;
         }
 
+        public async Task<int> DeletePlayerById(int playerId)
+        {
+            using var connection = new SqlConnection(_settings.EducationServer);
+            connection.Open();
+
+            var result = await connection.ExecuteAsync($"DELETE FROM {TABLE} WHERE Id = {playerId}");
+            return result;
+        }
+
         public async Task<IEnumerable<Jugador>> GetPlayersByTeam(int teamId)
         {
             using var connection = new SqlConnection(_settings.EducationServer);
