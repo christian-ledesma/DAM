@@ -1,10 +1,7 @@
 ﻿using Liga.Api.Entities;
-using Liga.Api.Repositories;
 using Liga.Api.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
 using System;
-using System.Collections;
 using System.Threading.Tasks;
 
 namespace Liga.Api.Controllers
@@ -82,6 +79,3 @@ namespace Liga.Api.Controllers
         }
     }
 }
-
-    
-

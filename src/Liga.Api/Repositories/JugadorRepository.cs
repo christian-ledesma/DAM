@@ -1,9 +1,7 @@
 ﻿using Dapper;
 using Liga.Api.Entities;
 using Microsoft.Data.SqlClient;
-using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Liga.Api.Repositories
