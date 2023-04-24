@@ -15,7 +15,7 @@ namespace Liga.Api.Controllers
         public JugadorController(IJugadorService jugadorService)
         {
             _jugadorService = jugadorService;
-            this._response = new ResponseBase();
+            _response = new ResponseBase();
         }
 
         [HttpGet]
@@ -34,18 +34,19 @@ namespace Liga.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<object> Post([FromBody] Jugador jugador)
+        public async Task<IActionResult> Post([FromBody] Jugador jugador)
         {
             try
             {
                 await _jugadorService.CreatePlayer(jugador);
+                _response.Success = true;
             }
             catch (Exception e)
             {
                 _response.Success = false;
                 _response.Message = e.Message;
             }
-            return _response;
+            return Ok(_response);
         }
 
         [HttpPut]

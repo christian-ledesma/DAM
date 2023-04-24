@@ -37,12 +37,14 @@ namespace Liga.Api
         {
             services.AddScoped<IEquipoService, EquipoService>();
             services.AddScoped<IJugadorService, JugadorService>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
         }
 
         public void AddRepositories(IServiceCollection services)
         {
             services.AddScoped<IEquipoRepository, EquipoRepository>();
             services.AddScoped<IJugadorRepository, JugadorRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

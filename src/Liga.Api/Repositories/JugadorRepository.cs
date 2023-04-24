@@ -50,7 +50,7 @@ namespace Liga.Api.Repositories
             connection.Open();
 
             var player = await connection.ExecuteAsync
-                ($"UPDATE {TABLE} SET VALOR = @Valor, EDAD = @Edad WHERE Id = @Id", jugador);
+                ($"UPDATE {TABLE} SET VALOR = @Valor, Edad = @Edad WHERE Id = @Id", jugador);
             return player;
         }
 

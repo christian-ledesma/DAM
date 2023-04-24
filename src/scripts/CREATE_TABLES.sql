@@ -17,7 +17,7 @@ CREATE TABLE Posiciones(
 CREATE TABLE Usuarios(
 	Id int primary key identity(1,1),
 	Email nvarchar(100),
-	Password nvarchar(100),
+	Password nvarchar(max),
 	Nombre nvarchar(50),
 	Apellidos nvarchar(50),
 	Admin bit
