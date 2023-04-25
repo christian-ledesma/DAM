@@ -51,7 +51,7 @@ namespace Liga.FormUI
 
         private void buttonEstadísticas_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new Estadísticas());
+            openChildForm(new Clasificacion());
         }
 
         private void buttonPerfil_Click(object sender, System.EventArgs e)

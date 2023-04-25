@@ -1,6 +1,6 @@
 ﻿namespace Liga.FormUI.Forms
 {
-    partial class Estadísticas
+    partial class Clasificacion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Estadísticas
+            // Clasificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 681);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Estadísticas";
-            this.Text = "Estadísticas";
+            this.Name = "Clasificacion";
+            this.Text = "Clasificacion";
             this.ResumeLayout(false);
 
         }

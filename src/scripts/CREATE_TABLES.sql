@@ -55,6 +55,9 @@ CREATE TABLE Equipos(
 	PartidosGanados int,
 	PartidosEmpatados int,
 	PartidosPerdidos int,
+	ImagenUrl nvarchar(max),
+	Ubicacion nvarchar(200),
+	Estadio nvarchar(200)
 );
 
 CREATE TABLE Partidos(

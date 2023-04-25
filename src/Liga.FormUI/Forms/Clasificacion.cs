@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Liga.FormUI.Forms
 {
-    public partial class Estadísticas : Form
+    public partial class Clasificacion : Form
     {
-        public Estadísticas()
+        public Clasificacion()
         {
             InitializeComponent();
         }
