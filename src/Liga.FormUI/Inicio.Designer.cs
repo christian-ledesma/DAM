@@ -78,6 +78,7 @@
             this.buttonNoticias.Text = "Noticias";
             this.buttonNoticias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNoticias.UseVisualStyleBackColor = true;
+            this.buttonNoticias.Click += new System.EventHandler(this.buttonNoticias_Click);
             // 
             // buttonPerfil
             // 
@@ -94,6 +95,7 @@
             this.buttonPerfil.Text = "Mi Perfil";
             this.buttonPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPerfil.UseVisualStyleBackColor = true;
+            this.buttonPerfil.Click += new System.EventHandler(this.buttonPerfil_Click);
             // 
             // buttonEstadísticas
             // 
@@ -110,6 +112,7 @@
             this.buttonEstadísticas.Text = "Estadísticas";
             this.buttonEstadísticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEstadísticas.UseVisualStyleBackColor = true;
+            this.buttonEstadísticas.Click += new System.EventHandler(this.buttonEstadísticas_Click);
             // 
             // buttonJugadores
             // 
@@ -126,6 +129,7 @@
             this.buttonJugadores.Text = "Jugadores";
             this.buttonJugadores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonJugadores.UseVisualStyleBackColor = true;
+            this.buttonJugadores.Click += new System.EventHandler(this.buttonJugadores_Click);
             // 
             // buttonEquipos
             // 
@@ -142,6 +146,7 @@
             this.buttonEquipos.Text = "Equipos";
             this.buttonEquipos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEquipos.UseVisualStyleBackColor = true;
+            this.buttonEquipos.Click += new System.EventHandler(this.buttonEquipos_Click);
             // 
             // buttonMiEquipo
             // 
@@ -158,6 +163,7 @@
             this.buttonMiEquipo.Text = "Mi Equipo";
             this.buttonMiEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMiEquipo.UseVisualStyleBackColor = true;
+            this.buttonMiEquipo.Click += new System.EventHandler(this.buttonMiEquipo_Click);
             // 
             // ButtonInicio
             // 
@@ -174,6 +180,7 @@
             this.ButtonInicio.Text = "Inicio";
             this.ButtonInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonInicio.UseVisualStyleBackColor = true;
+            this.ButtonInicio.Click += new System.EventHandler(this.ButtonInicio_Click);
             // 
             // panel1
             // 

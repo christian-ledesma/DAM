@@ -43,8 +43,9 @@ namespace Liga.Api.Controllers
         {
             try
             {
-                var success = await _usuarioService.Login(loginDto);
-                _response.Success = true;
+                var result = await _usuarioService.Login(loginDto);
+                _response.Success = result.Success;
+                _response.Content = result.Content;
             }
             catch (Exception e)
             {

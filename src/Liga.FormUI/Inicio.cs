@@ -1,12 +1,16 @@
-﻿using System.Windows.Forms;
+﻿using Liga.FormUI.Forms;
+using System.Windows.Forms;
 
 namespace Liga.FormUI
 {
     public partial class Inicio : Form
     {
-        public Inicio()
+        private readonly int _userId;
+        public Inicio(int userId)
         {
+            MessageBox.Show($"Welcome user number: {userId}");
             InitializeComponent();
+            _userId = userId;
         }
 
         private Form activeForm = null;
@@ -24,5 +28,40 @@ namespace Liga.FormUI
             childForm.Show();
         }
 
+        private void buttonMiEquipo_Click(object sender, System.EventArgs e)
+        {
+            openChildForm(new MiEquipo());
+        }
+
+        private void buttonEquipos_Click(object sender, System.EventArgs e)
+        {
+            openChildForm(new Equipos());
+        }
+
+        private void ButtonInicio_Click(object sender, System.EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+        }
+
+        private void buttonJugadores_Click(object sender, System.EventArgs e)
+        {
+            openChildForm(new Jugadores());
+        }
+
+        private void buttonEstadísticas_Click(object sender, System.EventArgs e)
+        {
+            openChildForm(new Estadísticas());
+        }
+
+        private void buttonPerfil_Click(object sender, System.EventArgs e)
+        {
+            openChildForm(new MiPerfil());
+        }
+
+        private void buttonNoticias_Click(object sender, System.EventArgs e)
+        {
+            openChildForm(new Noticias());
+        }
     }
 }
