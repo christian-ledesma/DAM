@@ -16,6 +16,15 @@ namespace Liga.Api.Repositories
             _settings = settings;
         }
 
+        public async Task<Equipo> GetByEntrenador(int entrenadorId)
+        {
+            using var connection = new SqlConnection(_settings.EducationServer);
+            connection.Open();
+
+            var result = await connection.QueryFirstOrDefaultAsync<Equipo>($"SELECT * FROM {TABLE} WHERE EntrenadorId = {entrenadorId}");
+            return result;
+        }
+
         public async Task<IEnumerable<Equipo>> GetList()
         {
             using var connection = new SqlConnection(_settings.EducationServer);

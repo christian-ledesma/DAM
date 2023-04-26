@@ -7,5 +7,6 @@ namespace Liga.Api.Services
     public interface IEquipoService
     {
         Task<IEnumerable<Equipo>> GetAll();
+        Task<Equipo> GetByEntrenador(int entrenadorId);
     }
 }

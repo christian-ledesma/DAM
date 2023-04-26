@@ -27,8 +27,11 @@ CREATE TABLE Jugadores(
 	Id int primary key identity(1,1),
 	Nombre nvarchar(50),
 	Apellidos nvarchar(50),
+	Nacionalidad nvarchar(50),
 	Valor decimal(10,2),
 	PosicionId int,
+	EquipoId int,
+	Edad int,
 	Dorsal int
 );
 

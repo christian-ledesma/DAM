@@ -21,5 +21,13 @@ namespace Liga.Api.Controllers
             var equipos = await _equipoService.GetAll();
             return Ok(equipos);
         }
+
+        [HttpGet]
+        [Route("ByEntrenador/{entrenadorId}")]
+        public async Task<IActionResult> GetByEntrenador(int entrenadorId)
+        {
+            var equipos = await _equipoService.GetByEntrenador(entrenadorId);
+            return Ok(equipos);
+        }
     }
 }

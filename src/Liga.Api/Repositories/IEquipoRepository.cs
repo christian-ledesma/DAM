@@ -7,5 +7,6 @@ namespace Liga.Api.Repositories
     public interface IEquipoRepository
     {
         Task<IEnumerable<Equipo>> GetList();
+        Task<Equipo> GetByEntrenador(int entrenadorId);
     }
 }

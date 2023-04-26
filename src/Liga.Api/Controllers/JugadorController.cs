@@ -26,8 +26,8 @@ namespace Liga.Api.Controllers
         }
 
         [HttpGet]
-        [Route("{id}")]
-        public async Task<IActionResult> GetById([FromQuery] int teamId)
+        [Route("ByTeam/{teamId}")]
+        public async Task<IActionResult> GetById(int teamId)
         {
             var jugadores = await _jugadorService.GetAllPlayersById(teamId);
             return Ok(jugadores);

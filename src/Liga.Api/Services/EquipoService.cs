@@ -19,5 +19,11 @@ namespace Liga.Api.Services
             var equipos = await _equipoRepository.GetList();
             return equipos;
         }
+
+        public async Task<Equipo> GetByEntrenador(int entrenadorId)
+        {
+            var equipo = await _equipoRepository.GetByEntrenador(entrenadorId);
+            return equipo;
+        }
     }
 }

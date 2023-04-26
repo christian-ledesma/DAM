@@ -1,6 +1,6 @@
-﻿namespace Liga.Api.Entities
+﻿namespace Liga.FormUI.DTOs
 {
-    public class Jugador
+    public class JugadorDto
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

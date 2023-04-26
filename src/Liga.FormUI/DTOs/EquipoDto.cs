@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace Liga.Api.Entities
+﻿namespace Liga.FormUI.DTOs
 {
-    public class Equipo
+    public class EquipoDto
     {
         public int Id { get; set; }
         public int EntrenadorId { get; set; }
