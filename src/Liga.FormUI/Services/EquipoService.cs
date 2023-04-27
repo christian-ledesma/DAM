@@ -20,5 +20,17 @@ namespace Liga.FormUI.Services
             var response = JsonConvert.DeserializeObject<EquipoDto>(resultContent);
             return response;
         }
+
+        public async Task<IEnumerable<EquipoDto>> GetAll()
+        {
+            using var client = new HttpClient();
+            client.BaseAddress = new Uri(Constants.API_URL);
+
+            var result = await client.GetAsync($"api/Equipo");
+            string resultContent = await result.Content.ReadAsStringAsync();
+
+            var response = JsonConvert.DeserializeObject<IEnumerable<EquipoDto>>(resultContent);
+            return response;
+        }
     }
 }

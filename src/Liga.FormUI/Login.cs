@@ -1,4 +1,5 @@
 ﻿using Liga.FormUI.DTOs;
+using Liga.FormUI.Forms;
 using Liga.FormUI.Services;
 using System;
 using System.Windows.Forms;
@@ -37,10 +38,18 @@ namespace Liga.FormUI
             var response = await _usuarioService.Login(loginDto);
             if (response.Success)
             {
-                int userId = int.Parse(response.Content.ToString());
-                var inicio = new Inicio(userId);
+                int userId = int.Parse(response.UsuarioId.ToString());
+                if (response.EsAdmin)
+                {
+                    var panel = new PanelAdmin();
+                    panel.Show();
+                }
+                else
+                {
+                    var inicio = new Inicio(userId);
+                    inicio.Show();
+                }
                 Hide();
-                inicio.Show();
             }
             else
             {

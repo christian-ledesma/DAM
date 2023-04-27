@@ -28,92 +28,159 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new System.Windows.Forms.DataGridView();
-            Posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            PJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            PG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            PE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.clasificacionGrid = new System.Windows.Forms.DataGridView();
+            this.Posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.clasificacionGrid)).BeginInit();
+            this.SuspendLayout();
             // 
-            // dataGridView1
+            // clasificacionGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Posicion, Equipo, Puntos, PJ, PP, PG, PE });
-            dataGridView1.Location = new System.Drawing.Point(61, 56);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(838, 576);
-            dataGridView1.TabIndex = 0;
+            this.clasificacionGrid.AllowUserToAddRows = false;
+            this.clasificacionGrid.AllowUserToDeleteRows = false;
+            this.clasificacionGrid.AllowUserToResizeColumns = false;
+            this.clasificacionGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.clasificacionGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.clasificacionGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            this.clasificacionGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clasificacionGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.clasificacionGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clasificacionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.clasificacionGrid.ColumnHeadersHeight = 50;
+            this.clasificacionGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Posicion,
+            this.Equipo,
+            this.Puntos,
+            this.PJ,
+            this.PG,
+            this.PE,
+            this.PP});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.clasificacionGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.clasificacionGrid.EnableHeadersVisualStyles = false;
+            this.clasificacionGrid.Location = new System.Drawing.Point(44, 56);
+            this.clasificacionGrid.MultiSelect = false;
+            this.clasificacionGrid.Name = "clasificacionGrid";
+            this.clasificacionGrid.ReadOnly = true;
+            this.clasificacionGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.clasificacionGrid.RowHeadersVisible = false;
+            this.clasificacionGrid.RowTemplate.Height = 40;
+            this.clasificacionGrid.RowTemplate.ReadOnly = true;
+            this.clasificacionGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clasificacionGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.clasificacionGrid.ShowCellErrors = false;
+            this.clasificacionGrid.ShowCellToolTips = false;
+            this.clasificacionGrid.ShowEditingIcon = false;
+            this.clasificacionGrid.ShowRowErrors = false;
+            this.clasificacionGrid.Size = new System.Drawing.Size(866, 576);
+            this.clasificacionGrid.TabIndex = 0;
             // 
             // Posicion
             // 
-            Posicion.HeaderText = "Posicion";
-            Posicion.Name = "Posicion";
-            Posicion.ReadOnly = true;
+            this.Posicion.HeaderText = "Posicion";
+            this.Posicion.Name = "Posicion";
+            this.Posicion.ReadOnly = true;
+            this.Posicion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Posicion.Width = 110;
             // 
             // Equipo
             // 
-            Equipo.HeaderText = "Equipo";
-            Equipo.Name = "Equipo";
-            Equipo.ReadOnly = true;
+            this.Equipo.HeaderText = "Equipo";
+            this.Equipo.Name = "Equipo";
+            this.Equipo.ReadOnly = true;
+            this.Equipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Equipo.Width = 140;
             // 
             // Puntos
             // 
-            Puntos.HeaderText = "Puntos";
-            Puntos.Name = "Puntos";
-            Puntos.ReadOnly = true;
+            this.Puntos.HeaderText = "Puntos";
+            this.Puntos.Name = "Puntos";
+            this.Puntos.ReadOnly = true;
+            this.Puntos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Puntos.Width = 120;
             // 
             // PJ
             // 
-            PJ.HeaderText = "PJ";
-            PJ.Name = "PJ";
-            PJ.ReadOnly = true;
-            // 
-            // PP
-            // 
-            PP.HeaderText = "PP";
-            PP.Name = "PP";
-            PP.ReadOnly = true;
+            this.PJ.HeaderText = "PJ";
+            this.PJ.Name = "PJ";
+            this.PJ.ReadOnly = true;
+            this.PJ.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.PJ.Width = 120;
             // 
             // PG
             // 
-            PG.HeaderText = "PG";
-            PG.Name = "PG";
-            PG.ReadOnly = true;
+            this.PG.HeaderText = "PG";
+            this.PG.Name = "PG";
+            this.PG.ReadOnly = true;
+            this.PG.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.PG.Width = 120;
             // 
             // PE
             // 
-            PE.HeaderText = "PE";
-            PE.Name = "PE";
-            PE.ReadOnly = true;
+            this.PE.HeaderText = "PE";
+            this.PE.Name = "PE";
+            this.PE.ReadOnly = true;
+            this.PE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.PE.Width = 118;
+            // 
+            // PP
+            // 
+            this.PP.HeaderText = "PP";
+            this.PP.Name = "PP";
+            this.PP.ReadOnly = true;
+            this.PP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.PP.Width = 120;
             // 
             // Clasificacion
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.FromArgb(206, 235, 252);
-            ClientSize = new System.Drawing.Size(944, 681);
-            Controls.Add(dataGridView1);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Name = "Clasificacion";
-            Text = "Clasificacion";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            this.ClientSize = new System.Drawing.Size(944, 681);
+            this.Controls.Add(this.clasificacionGrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Clasificacion";
+            this.Text = "Clasificacion";
+            this.Load += new System.EventHandler(this.Clasificacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.clasificacionGrid)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView clasificacionGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Posicion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
         private System.Windows.Forms.DataGridViewTextBoxColumn PJ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PP;
         private System.Windows.Forms.DataGridViewTextBoxColumn PG;
         private System.Windows.Forms.DataGridViewTextBoxColumn PE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PP;
     }
 }

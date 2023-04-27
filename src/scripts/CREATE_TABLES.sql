@@ -52,6 +52,7 @@ CREATE TABLE EquipoOfertas(
 CREATE TABLE Equipos(
 	Id int primary key identity(1,1),
 	EntrenadorId int,
+	Nombre nvarchar(100),
 	Puntos int,
 	Presupuesto decimal(10,2),
 	PartidosJugados int,

@@ -17,7 +17,7 @@ namespace Liga.Api.Services
             _usuarioRepository = usuarioRepository ?? throw new ArgumentNullException(nameof(usuarioRepository));
         }
 
-        public async Task<ResponseBase> Login(UsuarioLoginDto loginDto)
+        public async Task<UsuarioLoginResponse> Login(UsuarioLoginDto loginDto)
         {
             try
             {
@@ -29,8 +29,9 @@ namespace Liga.Api.Services
                 if (usuario.Password != hashedPassword)
                     throw new Exception("Contraseña incorrecta");
 
-                var response = new ResponseBase();
-                response.Content = usuario.Id;
+                var response = new UsuarioLoginResponse();
+                response.UsuarioId = usuario.Id;
+                response.EsAdmin = usuario.Admin;
                 response.Success = true;
                 return response;
             }

@@ -7,6 +7,6 @@ namespace Liga.Api.Services
     public interface IUsuarioService
     {
         Task RegistrarUsuario(Usuario usuario);
-        Task<ResponseBase> Login(UsuarioLoginDto loginDto);
+        Task<UsuarioLoginResponse> Login(UsuarioLoginDto loginDto);
     }
 }

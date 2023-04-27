@@ -32,7 +32,7 @@
             this.SidebarPanel = new System.Windows.Forms.Panel();
             this.buttonNoticias = new System.Windows.Forms.Button();
             this.buttonPerfil = new System.Windows.Forms.Button();
-            this.buttonEstadísticas = new System.Windows.Forms.Button();
+            this.buttonClasificacion = new System.Windows.Forms.Button();
             this.buttonJugadores = new System.Windows.Forms.Button();
             this.buttonEquipos = new System.Windows.Forms.Button();
             this.buttonMiEquipo = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.SidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
             this.SidebarPanel.Controls.Add(this.buttonNoticias);
             this.SidebarPanel.Controls.Add(this.buttonPerfil);
-            this.SidebarPanel.Controls.Add(this.buttonEstadísticas);
+            this.SidebarPanel.Controls.Add(this.buttonClasificacion);
             this.SidebarPanel.Controls.Add(this.buttonJugadores);
             this.SidebarPanel.Controls.Add(this.buttonEquipos);
             this.SidebarPanel.Controls.Add(this.buttonMiEquipo);
@@ -97,22 +97,22 @@
             this.buttonPerfil.UseVisualStyleBackColor = true;
             this.buttonPerfil.Click += new System.EventHandler(this.buttonPerfil_Click);
             // 
-            // buttonEstadísticas
+            // buttonClasificacion
             // 
-            this.buttonEstadísticas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEstadísticas.FlatAppearance.BorderSize = 0;
-            this.buttonEstadísticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEstadísticas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonEstadísticas.ForeColor = System.Drawing.Color.Black;
-            this.buttonEstadísticas.Location = new System.Drawing.Point(0, 280);
-            this.buttonEstadísticas.Name = "buttonEstadísticas";
-            this.buttonEstadísticas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonEstadísticas.Size = new System.Drawing.Size(320, 45);
-            this.buttonEstadísticas.TabIndex = 5;
-            this.buttonEstadísticas.Text = "Estadísticas";
-            this.buttonEstadísticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEstadísticas.UseVisualStyleBackColor = true;
-            this.buttonEstadísticas.Click += new System.EventHandler(this.buttonEstadísticas_Click);
+            this.buttonClasificacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonClasificacion.FlatAppearance.BorderSize = 0;
+            this.buttonClasificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClasificacion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonClasificacion.ForeColor = System.Drawing.Color.Black;
+            this.buttonClasificacion.Location = new System.Drawing.Point(0, 280);
+            this.buttonClasificacion.Name = "buttonClasificacion";
+            this.buttonClasificacion.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.buttonClasificacion.Size = new System.Drawing.Size(320, 45);
+            this.buttonClasificacion.TabIndex = 5;
+            this.buttonClasificacion.Text = "Clasificación";
+            this.buttonClasificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonClasificacion.UseVisualStyleBackColor = true;
+            this.buttonClasificacion.Click += new System.EventHandler(this.buttonEstadísticas_Click);
             // 
             // buttonJugadores
             // 
@@ -203,8 +203,11 @@
             // 
             // panelContent
             // 
+            this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(320, 0);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(944, 681);
@@ -234,7 +237,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonNoticias;
         private System.Windows.Forms.Button buttonPerfil;
-        private System.Windows.Forms.Button buttonEstadísticas;
+        private System.Windows.Forms.Button buttonClasificacion;
         private System.Windows.Forms.Button buttonJugadores;
         private System.Windows.Forms.Button buttonEquipos;
         private System.Windows.Forms.Button buttonMiEquipo;

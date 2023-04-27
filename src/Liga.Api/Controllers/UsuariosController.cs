@@ -41,22 +41,25 @@ namespace Liga.Api.Controllers
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] UsuarioLoginDto loginDto)
         {
+            var response = new UsuarioLoginResponse();
             try
             {
                 //var result = await _usuarioService.Login(loginDto);
-                //_response.Success = result.Success;
-                //_response.Content = result.Content;
+                //response.Success = result.Success;
+                //response.UsuarioId = result.UsuarioId;
+                //response.EsAdmin = result.EsAdmin;
 
 
-                _response.Success = true;
-                _response.Content = 1;
+                response.Success = true;
+                response.UsuarioId = 2;
+                response.EsAdmin = false;
             }
             catch (Exception e)
             {
-                _response.Success = false;
-                _response.Message = e.Message;
+                response.Success = false;
+                response.Message = e.Message;
             }
-            return Ok(_response);
+            return Ok(response);
         }
     }
 }
