@@ -17,6 +17,22 @@ namespace Liga.Api.Services
             _usuarioRepository = usuarioRepository ?? throw new ArgumentNullException(nameof(usuarioRepository));
         }
 
+        public async Task ActualizarUsuario(Usuario usuario)
+        {
+            try
+            {
+                if (usuario.Password != null)
+                {
+                    usuario.Password = HashPassword(usuario.Password);
+                }
+                await _usuarioRepository.UpdateUser(usuario);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<UsuarioLoginResponse> Login(UsuarioLoginDto loginDto)
         {
             try
@@ -43,18 +59,23 @@ namespace Liga.Api.Services
 
         public async Task RegistrarUsuario(Usuario usuario)
         {
-            usuario.Password = HashPassword(usuario.Password);
-            await _usuarioRepository.CreateUser(usuario);
+            try
+            {
+                usuario.Password = HashPassword(usuario.Password);
+                await _usuarioRepository.CreateUser(usuario);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private string HashPassword(string password)
         {
             using var sha256Hash = SHA256.Create();
 
-            // ComputeHash - returns byte array
+            // CIFRAMOS CONTRASEÑA PARA MAYOR SEGURIDAD
             byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-            // Convert byte array to a string
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < bytes.Length; i++)
             {

@@ -53,11 +53,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.clasificacionGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.clasificacionGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clasificacionGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
             this.clasificacionGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clasificacionGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.clasificacionGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -66,6 +69,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.clasificacionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.clasificacionGrid.ColumnHeadersHeight = 50;
+            this.clasificacionGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.clasificacionGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Posicion,
             this.Equipo,
@@ -89,6 +93,8 @@
             this.clasificacionGrid.ReadOnly = true;
             this.clasificacionGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.clasificacionGrid.RowHeadersVisible = false;
+            this.clasificacionGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.clasificacionGrid.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.clasificacionGrid.RowTemplate.Height = 40;
             this.clasificacionGrid.RowTemplate.ReadOnly = true;
             this.clasificacionGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -102,7 +108,7 @@
             // 
             // Posicion
             // 
-            this.Posicion.HeaderText = "Posicion";
+            this.Posicion.HeaderText = "Posición";
             this.Posicion.Name = "Posicion";
             this.Posicion.ReadOnly = true;
             this.Posicion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;

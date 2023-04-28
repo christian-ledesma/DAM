@@ -7,5 +7,6 @@ namespace Liga.Api.Repositories
     {
         Task CreateUser(Usuario usuario);
         Task<Usuario> GetByEmail(string email);
+        Task UpdateUser(Usuario usuario);
     }
 }

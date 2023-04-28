@@ -46,5 +46,19 @@ namespace Liga.Api.Repositories
             var result = await connection.QueryFirstOrDefaultAsync<Usuario>(query, param);
             return result;
         }
+
+        public async Task UpdateUser(Usuario usuario)
+        {
+            var query = $@"UPDATE Usuarios
+                            SET Email = @Email,
+                                Password = @Password,
+                                Nombre = @Nombre,
+                                Apellidos = @Apellidos
+                            WHERE Id = @Id";
+            using var connection = new SqlConnection(_settings.EducationServer);
+            connection.Open();
+
+            await connection.ExecuteAsync(query, usuario);
+        }
     }
 }

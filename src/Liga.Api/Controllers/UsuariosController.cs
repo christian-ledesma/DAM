@@ -61,5 +61,22 @@ namespace Liga.Api.Controllers
             }
             return Ok(response);
         }
+
+        [HttpPut]
+        [Route("UpdateUser")]
+        public async Task<IActionResult> Update([FromBody] Usuario usuario)
+        {
+            try
+            {
+                await _usuarioService.ActualizarUsuario(usuario);
+                _response.Success = true;
+            }
+            catch (Exception e)
+            {
+                _response.Success = false;
+                _response.Message = e.Message;
+            }
+            return Ok(_response);
+        }
     }
 }
