@@ -21,7 +21,7 @@ CREATE TABLE Usuarios(
 	Password nvarchar(max),
 	Nombre nvarchar(50),
 	Apellidos nvarchar(50),
-	ImagenUrl nvarchar(max)
+	ImagenBytes varbinary(max)
 );
 
 CREATE TABLE Jugadores(

@@ -10,7 +10,6 @@ namespace Liga.FormUI.Forms
     public partial class Clasificacion : Form
     {
         private readonly EquipoService _equiposService;
-        private readonly IEnumerable<EquipoDto> _equipos;
         public Clasificacion()
         {
             _equiposService = new EquipoService();

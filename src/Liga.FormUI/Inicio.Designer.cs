@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.buttonCerrarSesion = new System.Windows.Forms.Button();
             this.SidebarPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +50,7 @@
             // 
             this.SidebarPanel.AutoScroll = true;
             this.SidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(226)))), ((int)(((byte)(251)))));
+            this.SidebarPanel.Controls.Add(this.buttonCerrarSesion);
             this.SidebarPanel.Controls.Add(this.buttonNoticias);
             this.SidebarPanel.Controls.Add(this.buttonPerfil);
             this.SidebarPanel.Controls.Add(this.buttonClasificacion);
@@ -213,6 +215,23 @@
             this.panelContent.Size = new System.Drawing.Size(944, 681);
             this.panelContent.TabIndex = 1;
             // 
+            // buttonCerrarSesion
+            // 
+            this.buttonCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.buttonCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.buttonCerrarSesion.Location = new System.Drawing.Point(0, 636);
+            this.buttonCerrarSesion.Name = "buttonCerrarSesion";
+            this.buttonCerrarSesion.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.buttonCerrarSesion.Size = new System.Drawing.Size(320, 45);
+            this.buttonCerrarSesion.TabIndex = 8;
+            this.buttonCerrarSesion.Text = "Cerrar Sesión";
+            this.buttonCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCerrarSesion.UseVisualStyleBackColor = true;
+            this.buttonCerrarSesion.Click += new System.EventHandler(this.buttonCerrarSesion_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -243,5 +262,6 @@
         private System.Windows.Forms.Button buttonMiEquipo;
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonCerrarSesion;
     }
 }

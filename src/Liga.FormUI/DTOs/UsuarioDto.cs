@@ -1,6 +1,6 @@
-﻿namespace Liga.Api.DTOs
+﻿namespace Liga.FormUI.DTOs
 {
-    public class UsuarioLoginResponse : ResponseBase
+    public class UsuarioDto
     {
         public int Id { get; set; }
         public string Email { get; set; }

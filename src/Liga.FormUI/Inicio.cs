@@ -1,4 +1,5 @@
-﻿using Liga.FormUI.Forms;
+﻿using Liga.FormUI.DTOs;
+using Liga.FormUI.Forms;
 using Liga.FormUI.Services;
 using System.Windows.Forms;
 
@@ -6,13 +7,13 @@ namespace Liga.FormUI
 {
     public partial class Inicio : Form
     {
-        private readonly int _userId;
+        public UsuarioDto _usuario;
         private readonly JugadorService _jugadorService;
         private readonly EquipoService _equipoService;
 
-        public Inicio(int userId)
+        public Inicio(UsuarioDto usuario)
         {
-            _userId = userId;
+            _usuario = usuario;
             _jugadorService = new JugadorService();
             _equipoService = new EquipoService();
 
@@ -36,7 +37,7 @@ namespace Liga.FormUI
 
         private async void buttonMiEquipo_Click(object sender, System.EventArgs e)
         {
-            var equipo = await _equipoService.GetByEntrenador(_userId);
+            var equipo = await _equipoService.GetByEntrenador(_usuario.Id);
             var jugadores = await _jugadorService.GetJugadoresInTeam(equipo.Id);
             openChildForm(new MiEquipo(equipo, jugadores));
         }
@@ -64,12 +65,19 @@ namespace Liga.FormUI
 
         private void buttonPerfil_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new MiPerfil());
+            openChildForm(new MiPerfil(this, _usuario));
         }
 
         private void buttonNoticias_Click(object sender, System.EventArgs e)
         {
             openChildForm(new Noticias());
+        }
+
+        private void buttonCerrarSesion_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            var login = new Login();
+            login.Show();
         }
     }
 }

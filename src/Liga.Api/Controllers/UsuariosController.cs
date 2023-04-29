@@ -44,15 +44,8 @@ namespace Liga.Api.Controllers
             var response = new UsuarioLoginResponse();
             try
             {
-                //var result = await _usuarioService.Login(loginDto);
-                //response.Success = result.Success;
-                //response.UsuarioId = result.UsuarioId;
-                //response.EsAdmin = result.EsAdmin;
-
-
-                response.Success = true;
-                response.UsuarioId = 2;
-                response.EsAdmin = false;
+                var result = await _usuarioService.Login(loginDto);
+                return Ok(result);
             }
             catch (Exception e)
             {
@@ -63,7 +56,6 @@ namespace Liga.Api.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateUser")]
         public async Task<IActionResult> Update([FromBody] Usuario usuario)
         {
             try
@@ -77,6 +69,14 @@ namespace Liga.Api.Controllers
                 _response.Message = e.Message;
             }
             return Ok(_response);
+        }
+
+        [HttpGet]
+        [Route("getData/{email}")]
+        public async Task<IActionResult> GetData(string email)
+        {
+            var result = await _usuarioService.Get(email);
+            return Ok(result);
         }
     }
 }

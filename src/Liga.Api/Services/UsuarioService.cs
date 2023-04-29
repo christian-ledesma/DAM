@@ -33,6 +33,21 @@ namespace Liga.Api.Services
             }
         }
 
+        public async Task<UsuarioDataDto> Get(string email)
+        {
+            var usuario = await _usuarioRepository.GetByEmail(email);
+            var usuarioData = new UsuarioDataDto
+            {
+                Id = usuario.Id,
+                Email = email,
+                Nombre = usuario.Nombre,
+                Apellidos = usuario.Apellidos,
+                ImagenBytes = usuario.ImagenBytes,
+            };
+
+            return usuarioData;
+        }
+
         public async Task<UsuarioLoginResponse> Login(UsuarioLoginDto loginDto)
         {
             try
@@ -45,10 +60,16 @@ namespace Liga.Api.Services
                 if (usuario.Password != hashedPassword)
                     throw new Exception("Contraseña incorrecta");
 
-                var response = new UsuarioLoginResponse();
-                response.UsuarioId = usuario.Id;
-                response.EsAdmin = usuario.Admin;
-                response.Success = true;
+                var response = new UsuarioLoginResponse
+                {
+                    Id = usuario.Id,
+                    Nombre = usuario.Nombre,
+                    Apellidos = usuario.Apellidos,
+                    Email = usuario.Email,
+                    ImagenBytes = usuario.ImagenBytes,
+                    Admin = usuario.Admin,
+                    Success = true
+                };
                 return response;
             }
             catch (Exception)

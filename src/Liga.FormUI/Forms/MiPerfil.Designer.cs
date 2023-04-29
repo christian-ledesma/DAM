@@ -116,6 +116,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(242, 23);
             this.textBoxPassword.TabIndex = 6;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -137,6 +138,7 @@
             this.buttonGuardar.TabIndex = 9;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // buttonSubir
             // 
@@ -193,6 +195,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MiPerfil";
             this.Text = "MiPerfil";
+            this.Load += new System.EventHandler(this.MiPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

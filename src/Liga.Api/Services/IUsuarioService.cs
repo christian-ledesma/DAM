@@ -9,5 +9,6 @@ namespace Liga.Api.Services
         Task RegistrarUsuario(Usuario usuario);
         Task<UsuarioLoginResponse> Login(UsuarioLoginDto loginDto);
         Task ActualizarUsuario(Usuario usuario);
+        Task<UsuarioDataDto> Get(string email);
     }
 }

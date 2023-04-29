@@ -38,15 +38,23 @@ namespace Liga.FormUI
             var response = await _usuarioService.Login(loginDto);
             if (response.Success)
             {
-                int userId = int.Parse(response.UsuarioId.ToString());
-                if (response.EsAdmin)
+                if (response.Admin)
                 {
                     var panel = new PanelAdmin();
                     panel.Show();
                 }
                 else
                 {
-                    var inicio = new Inicio(userId);
+                    var usuario = new UsuarioDto
+                    {
+                        Id = int.Parse(response.Id.ToString()),
+                        Password = textBoxPassword.Text,
+                        Nombre = response.Nombre,
+                        Apellidos = response.Apellidos,
+                        Email = response.Email,
+                        ImagenBytes = response.ImagenBytes
+                    };
+                    var inicio = new Inicio(usuario);
                     inicio.Show();
                 }
                 Hide();
