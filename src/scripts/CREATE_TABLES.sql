@@ -33,7 +33,8 @@ CREATE TABLE Jugadores(
 	PosicionId int,
 	EquipoId int,
 	Edad int,
-	Dorsal int
+	Dorsal int,
+	ImagenBytes varbinary(max)
 );
 
 CREATE TABLE Ofertas(
@@ -60,7 +61,7 @@ CREATE TABLE Equipos(
 	PartidosGanados int,
 	PartidosEmpatados int,
 	PartidosPerdidos int,
-	ImagenUrl nvarchar(max),
+	ImagenBytes varbinary(max),
 	Ubicacion nvarchar(200),
 	Estadio nvarchar(200)
 );
