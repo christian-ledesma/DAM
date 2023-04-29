@@ -1,6 +1,5 @@
 ﻿using Liga.FormUI.DTOs;
 using Liga.FormUI.Forms;
-using Liga.FormUI.Services;
 using System.Windows.Forms;
 
 namespace Liga.FormUI
@@ -8,14 +7,10 @@ namespace Liga.FormUI
     public partial class Inicio : Form
     {
         public UsuarioDto _usuario;
-        private readonly JugadorService _jugadorService;
-        private readonly EquipoService _equipoService;
 
         public Inicio(UsuarioDto usuario)
         {
             _usuario = usuario;
-            _jugadorService = new JugadorService();
-            _equipoService = new EquipoService();
 
             InitializeComponent();
         }
@@ -35,11 +30,9 @@ namespace Liga.FormUI
             childForm.Show();
         }
 
-        private async void buttonMiEquipo_Click(object sender, System.EventArgs e)
+        private void buttonMiEquipo_Click(object sender, System.EventArgs e)
         {
-            var equipo = await _equipoService.GetByEntrenador(_usuario.Id);
-            var jugadores = await _jugadorService.GetJugadoresInTeam(equipo.Id);
-            openChildForm(new MiEquipo(equipo, jugadores));
+            openChildForm(new MiEquipo(_usuario.Id));
         }
 
         private void buttonEquipos_Click(object sender, System.EventArgs e)

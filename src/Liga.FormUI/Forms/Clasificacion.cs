@@ -1,8 +1,5 @@
-﻿using Liga.FormUI.DTOs;
-using Liga.FormUI.Services;
+﻿using Liga.FormUI.Services;
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Windows.Forms;
 
 namespace Liga.FormUI.Forms
@@ -13,13 +10,12 @@ namespace Liga.FormUI.Forms
         public Clasificacion()
         {
             _equiposService = new EquipoService();
-            RellenarEquipos();
             InitializeComponent();
         }
 
         private void Clasificacion_Load(object sender, EventArgs e)
         {
-            //AjustarAltura();
+            RellenarEquipos();
         }
 
         private async void RellenarEquipos()
@@ -39,16 +35,5 @@ namespace Liga.FormUI.Forms
                 row.Cells[6].Value = equipo.PartidosPerdidos;
             }
         }
-
-        //private void AjustarAltura()
-        //{
-        //    var height = clasificacionGrid.ColumnHeadersHeight;
-        //    foreach (DataGridViewRow dr in clasificacionGrid.Rows)
-        //    {
-        //        height += dr.Height;
-        //    }
-
-        //    clasificacionGrid.Height = height;
-        //}
     }
 }

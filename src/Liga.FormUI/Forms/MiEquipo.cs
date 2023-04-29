@@ -1,4 +1,5 @@
 ﻿using Liga.FormUI.DTOs;
+using Liga.FormUI.Services;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,37 +7,28 @@ namespace Liga.FormUI.Forms
 {
     public partial class MiEquipo : Form
     {
-        private readonly EquipoDto _equipo;
-        public MiEquipo(EquipoDto equipo, IEnumerable<JugadorDto> jugadores)
+        private readonly int _usuarioId;
+        private readonly EquipoService _equipoService;
+        private readonly JugadorService _jugadorService;
+
+        private EquipoDto _equipo;
+        private IEnumerable<JugadorDto> _jugadores;
+
+        public MiEquipo(int usuarioId)
         {
-            _equipo = equipo;
+            _usuarioId = usuarioId;
+            _equipoService = new EquipoService();
+            _jugadorService = new JugadorService();
             InitializeComponent();
-            RellenarGrid(jugadores);
         }
 
-        private void RellenarGrid(IEnumerable<JugadorDto> jugadores)
+        private async void MiEquipo_Load(object sender, System.EventArgs e)
         {
-            foreach (var jugador in jugadores)
-            {
-                int index = dataGridView1.Rows.Add();
-                DataGridViewRow row = dataGridView1.Rows[index];
+            var equipo = await _equipoService.GetByEntrenador(_usuarioId);
+            var jugadores = await _jugadorService.GetJugadoresInTeam(equipo.Id);
 
-                row.Cells[0].Value = jugador.Nombre;
-                row.Cells[1].Value = jugador.Apellidos;
-                row.Cells[2].Value = jugador.Nacionalidad;
-                row.Cells[3].Value = jugador.Dorsal;
-            }
-        }
-
-        private void MiEquipo_Load(object sender, System.EventArgs e)
-        {
-            var height = dataGridView1.ColumnHeadersHeight;
-            foreach (DataGridViewRow dr in dataGridView1.Rows)
-            {
-                height += dr.Height;
-            }
-
-            dataGridView1.Height = height;
+            _equipo = equipo;
+            _jugadores = jugadores;
         }
     }
 }
