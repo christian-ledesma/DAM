@@ -13,7 +13,6 @@ namespace Liga.FormUI.CustomControls
 
         private void customButton1_Click(object sender, System.EventArgs e)
         {
-
         }
 
         private string _nombreCompleto;

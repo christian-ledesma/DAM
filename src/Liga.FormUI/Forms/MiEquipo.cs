@@ -1,6 +1,8 @@
-﻿using Liga.FormUI.DTOs;
+﻿using Liga.FormUI.CustomControls;
+using Liga.FormUI.DTOs;
 using Liga.FormUI.Services;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Liga.FormUI.Forms
@@ -29,6 +31,25 @@ namespace Liga.FormUI.Forms
 
             _equipo = equipo;
             _jugadores = jugadores;
+
+            Populate();
         }
+
+        private void Populate()
+        {
+            var jugadorItems = new JugadorItem[_jugadores.Count()];
+
+            for (int i = 0; i < _jugadores.Count(); i++)
+            {
+                var nombreCompleto = $"{_jugadores.ToArray()[i].Nombre} {_jugadores.ToArray()[i].Apellidos}";
+                jugadorItems[i] = new JugadorItem();
+                jugadorItems[i].NombreCompleto = nombreCompleto;
+                jugadorItems[i].Pais = _jugadores.ToArray()[i].Nacionalidad;
+                jugadorItems[i].Posicion = _jugadores.ToArray()[i].PosicionId.ToString();
+            }
+
+            flowLayoutPanel1.Controls.AddRange(jugadorItems);
+        }
+
     }
 }

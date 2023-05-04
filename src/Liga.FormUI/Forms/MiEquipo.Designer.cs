@@ -151,9 +151,10 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(412, 163);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(394, 191);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(520, 471);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(538, 395);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // MiEquipo
