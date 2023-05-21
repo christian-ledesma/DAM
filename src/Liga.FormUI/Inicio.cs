@@ -7,6 +7,7 @@ namespace Liga.FormUI
     public partial class Inicio : Form
     {
         public UsuarioDto _usuario;
+        private int activeTab = 0;
 
         public Inicio(UsuarioDto usuario)
         {
@@ -32,12 +33,16 @@ namespace Liga.FormUI
 
         private void buttonMiEquipo_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new MiEquipo(_usuario.Id));
+            if (activeTab != 1)
+                openChildForm(new MiEquipo(_usuario.Id));
+            activeTab = 1;
         }
 
         private void buttonEquipos_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new Equipos());
+            if (activeTab != 2)
+                openChildForm(new Equipos());
+            activeTab = 2;
         }
 
         private void ButtonInicio_Click(object sender, System.EventArgs e)
@@ -48,22 +53,30 @@ namespace Liga.FormUI
 
         private void buttonJugadores_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new Jugadores());
+            if (activeTab != 3)
+                openChildForm(new Jugadores());
+            activeTab = 3;
         }
 
         private void buttonEstadísticas_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new Clasificacion());
+            if (activeTab != 4)
+                openChildForm(new Clasificacion());
+            activeTab = 4;
         }
 
         private void buttonPerfil_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new MiPerfil(this, _usuario));
+            if (activeTab != 5)
+                openChildForm(new MiPerfil(this, _usuario));
+            activeTab = 5;
         }
 
         private void buttonNoticias_Click(object sender, System.EventArgs e)
         {
-            openChildForm(new Noticias());
+            if (activeTab != 6)
+                openChildForm(new Noticias());
+            activeTab = 6;
         }
 
         private void buttonCerrarSesion_Click(object sender, System.EventArgs e)

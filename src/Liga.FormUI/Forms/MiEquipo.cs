@@ -42,10 +42,12 @@ namespace Liga.FormUI.Forms
             for (int i = 0; i < _jugadores.Count(); i++)
             {
                 var nombreCompleto = $"{_jugadores.ToArray()[i].Nombre} {_jugadores.ToArray()[i].Apellidos}";
-                jugadorItems[i] = new JugadorItem();
-                jugadorItems[i].NombreCompleto = nombreCompleto;
-                jugadorItems[i].Pais = _jugadores.ToArray()[i].Nacionalidad;
-                jugadorItems[i].Posicion = _jugadores.ToArray()[i].PosicionId.ToString();
+                jugadorItems[i] = new JugadorItem
+                {
+                    NombreCompleto = nombreCompleto,
+                    Pais = _jugadores.ToArray()[i].Nacionalidad,
+                    Posicion = _jugadores.ToArray()[i].PosicionId.ToString()
+                };
             }
 
             flowLayoutPanel1.Controls.AddRange(jugadorItems);

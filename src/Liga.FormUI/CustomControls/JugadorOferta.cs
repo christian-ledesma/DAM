@@ -1,12 +1,16 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Liga.FormUI.CustomControls
 {
-    public partial class JugadorItem : UserControl
+    public partial class JugadorOferta : UserControl
     {
-        public JugadorItem()
+        public JugadorOferta()
         {
             InitializeComponent();
         }

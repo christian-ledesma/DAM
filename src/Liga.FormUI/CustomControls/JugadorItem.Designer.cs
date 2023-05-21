@@ -80,35 +80,36 @@
             this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(220)))), ((int)(((byte)(123)))));
             this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(220)))), ((int)(((byte)(123)))));
             this.customButton1.BorderColor = System.Drawing.Color.Green;
-            this.customButton1.BorderRadius = 10;
+            this.customButton1.BorderRadius = 12;
             this.customButton1.BorderSize = 0;
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customButton1.ForeColor = System.Drawing.Color.Black;
             this.customButton1.Location = new System.Drawing.Point(374, 20);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(102, 29);
             this.customButton1.TabIndex = 4;
-            this.customButton1.Text = "Update";
+            this.customButton1.Text = "Actualizar";
             this.customButton1.TextColor = System.Drawing.Color.Black;
             this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // customButton2
             // 
             this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.customButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.customButton2.BorderColor = System.Drawing.Color.Green;
-            this.customButton2.BorderRadius = 10;
+            this.customButton2.BorderRadius = 12;
             this.customButton2.BorderSize = 0;
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customButton2.ForeColor = System.Drawing.Color.Black;
             this.customButton2.Location = new System.Drawing.Point(374, 55);
             this.customButton2.Name = "customButton2";
             this.customButton2.Size = new System.Drawing.Size(102, 29);
             this.customButton2.TabIndex = 5;
-            this.customButton2.Text = "Delete";
+            this.customButton2.Text = "Eliminar";
             this.customButton2.TextColor = System.Drawing.Color.Black;
             this.customButton2.UseVisualStyleBackColor = false;
             // 

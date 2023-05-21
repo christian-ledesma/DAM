@@ -41,6 +41,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.customButton1 = new Liga.FormUI.CustomControls.CustomButton();
+            this.customButton2 = new Liga.FormUI.CustomControls.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,12 +159,54 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(538, 395);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(217)))), ((int)(((byte)(144)))));
+            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(217)))), ((int)(((byte)(144)))));
+            this.customButton1.BorderColor = System.Drawing.Color.Green;
+            this.customButton1.BorderRadius = 12;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton1.ForeColor = System.Drawing.Color.Black;
+            this.customButton1.Location = new System.Drawing.Point(394, 145);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(150, 40);
+            this.customButton1.TabIndex = 12;
+            this.customButton1.Text = "Añadir";
+            this.customButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.customButton1.TextColor = System.Drawing.Color.Black;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
+            // customButton2
+            // 
+            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(217)))), ((int)(((byte)(144)))));
+            this.customButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(217)))), ((int)(((byte)(144)))));
+            this.customButton2.BorderColor = System.Drawing.Color.Green;
+            this.customButton2.BorderRadius = 12;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton2.ForeColor = System.Drawing.Color.Black;
+            this.customButton2.Location = new System.Drawing.Point(550, 145);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(150, 40);
+            this.customButton2.TabIndex = 13;
+            this.customButton2.Text = "Ofertas";
+            this.customButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.customButton2.TextColor = System.Drawing.Color.Black;
+            this.customButton2.UseVisualStyleBackColor = false;
+            // 
             // MiEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(944, 681);
+            this.Controls.Add(this.customButton2);
+            this.Controls.Add(this.customButton1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxEstadio);
@@ -199,5 +243,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private CustomControls.CustomButton customButton1;
+        private CustomControls.CustomButton customButton2;
     }
 }
