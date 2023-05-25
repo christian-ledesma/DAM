@@ -1,12 +1,13 @@
 ﻿using Liga.Api.DTOs;
 using Liga.Api.Entities;
-using Liga.Api.Repositories;
+using Liga.Api.Repositories.Interfaces;
+using Liga.Api.Services.Interfaces;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Services
+namespace Liga.Api.Services.Implementations
 {
     public class UsuarioService : IUsuarioService
     {

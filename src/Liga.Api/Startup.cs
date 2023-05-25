@@ -1,5 +1,7 @@
-using Liga.Api.Repositories;
-using Liga.Api.Services;
+using Liga.Api.Repositories.Implementations;
+using Liga.Api.Repositories.Interfaces;
+using Liga.Api.Services.Implementations;
+using Liga.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

@@ -2,7 +2,7 @@
 using Liga.Api.Entities;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Services
+namespace Liga.Api.Services.Interfaces
 {
     public interface IUsuarioService
     {

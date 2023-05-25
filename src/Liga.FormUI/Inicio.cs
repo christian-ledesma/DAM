@@ -47,8 +47,9 @@ namespace Liga.FormUI
 
         private void ButtonInicio_Click(object sender, System.EventArgs e)
         {
-            if (activeForm != null)
+            if (activeForm != null && activeTab != 0)
                 activeForm.Close();
+            activeTab = 0;
         }
 
         private void buttonJugadores_Click(object sender, System.EventArgs e)

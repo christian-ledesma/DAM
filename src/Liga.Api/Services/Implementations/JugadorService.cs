@@ -1,9 +1,10 @@
 ﻿using Liga.Api.Entities;
-using Liga.Api.Repositories;
+using Liga.Api.Repositories.Interfaces;
+using Liga.Api.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Services
+namespace Liga.Api.Services.Implementations
 {
     public class JugadorService : IJugadorService
     {

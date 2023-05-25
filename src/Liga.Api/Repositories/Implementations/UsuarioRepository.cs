@@ -1,10 +1,11 @@
 ﻿using Dapper;
 using Liga.Api.Entities;
+using Liga.Api.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Repositories
+namespace Liga.Api.Repositories.Implementations
 {
     public class UsuarioRepository : IUsuarioRepository
     {

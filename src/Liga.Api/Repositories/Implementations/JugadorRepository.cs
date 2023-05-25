@@ -1,10 +1,11 @@
 ﻿using Dapper;
 using Liga.Api.Entities;
+using Liga.Api.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Repositories
+namespace Liga.Api.Repositories.Implementations
 {
     public class JugadorRepository : IJugadorRepository
     {
@@ -60,7 +61,7 @@ namespace Liga.Api.Repositories
             connection.Open();
 
             var list = await connection.QueryAsync<Jugador>($"SELECT * FROM {TABLE}");
-            return (IEnumerable<Jugador>)list;
+            return list;
         }
     }
 }

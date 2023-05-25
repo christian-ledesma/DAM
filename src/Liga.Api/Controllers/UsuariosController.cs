@@ -1,6 +1,6 @@
 ﻿using Liga.Api.DTOs;
 using Liga.Api.Entities;
-using Liga.Api.Services;
+using Liga.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;

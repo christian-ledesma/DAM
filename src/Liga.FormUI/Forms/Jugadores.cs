@@ -21,8 +21,7 @@ namespace Liga.FormUI.Forms
 
         private async void Jugadores_Load(object sender, EventArgs e)
         {
-            var jugadores = await _jugadorService.GetJugadoresList();
-            _jugadores = jugadores;
+            _jugadores = await _jugadorService.GetJugadoresList();
 
             FillGrid();
         }

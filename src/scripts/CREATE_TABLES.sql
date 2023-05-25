@@ -72,3 +72,9 @@ CREATE TABLE Partidos(
 	EquipoGanadorId int,
 	Goles int
 );
+
+CREATE TABLE Noticias(
+	Id int primary key identity(1,1),
+	Titulo nvarchar(50),
+	Descripcion nvarchar(255)
+)

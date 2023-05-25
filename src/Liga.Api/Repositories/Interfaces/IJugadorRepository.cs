@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Repositories
+namespace Liga.Api.Repositories.Interfaces
 {
     public interface IJugadorRepository
     {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Liga.Api.Repositories
+namespace Liga.Api.Services.Interfaces
 {
-    public interface IEquipoRepository
+    public interface IEquipoService
     {
-        Task<IEnumerable<Equipo>> GetList();
+        Task<IEnumerable<Equipo>> GetAll();
         Task<Equipo> GetByEntrenador(int entrenadorId);
     }
 }
