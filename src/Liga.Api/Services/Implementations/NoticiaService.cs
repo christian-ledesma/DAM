@@ -19,7 +19,7 @@ namespace Liga.Api.Services.Implementations
         public async Task<IEnumerable<Noticia>> GetLatestNews()
         {
             var noticias = await _noticiaRepository.GetListAsync();
-            var latestNews = noticias.Take(5);
+            var latestNews = noticias.Take(5).OrderByDescending(x => x.Id);
 
             return latestNews;
         }
