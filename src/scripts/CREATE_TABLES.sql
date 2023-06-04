@@ -41,7 +41,8 @@ CREATE TABLE Ofertas(
 	Id int primary key identity(1,1),
 	OfertaEstadoId int,
 	Valor decimal(10,2),
-	JugadorId int
+	JugadorId int FOREIGN KEY REFERENCES Jugadores(Id),
+	EquipoId int FOREIGN KEY REFERENCES Equipos(Id)
 );
 
 CREATE TABLE EquipoOfertas(

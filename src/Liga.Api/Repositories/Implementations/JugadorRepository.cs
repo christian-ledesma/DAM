@@ -51,7 +51,9 @@ namespace Liga.Api.Repositories.Implementations
             connection.Open();
 
             var player = await connection.ExecuteAsync
-                ($"UPDATE {TABLE} SET VALOR = @Valor, Edad = @Edad WHERE Id = @Id", jugador);
+                ($@"UPDATE {TABLE} SET Nombre = @Nombre, Apellidos = @Apellidos,
+                                     Nacionalidad = @Nacionalidad, Dorsal = @Dorsal
+                                    WHERE Id = @Id", jugador);
             return player;
         }
 
@@ -62,6 +64,15 @@ namespace Liga.Api.Repositories.Implementations
 
             var list = await connection.QueryAsync<Jugador>($"SELECT * FROM {TABLE}");
             return list;
+        }
+
+        public async Task<Jugador> Find(int playerId)
+        {
+            using var connection = new SqlConnection(_settings.EducationServer);
+            connection.Open();
+
+            var result = await connection.QueryFirstAsync<Jugador>($"SELECT * FROM {TABLE} WHERE Id = {playerId}");
+            return result;
         }
     }
 }

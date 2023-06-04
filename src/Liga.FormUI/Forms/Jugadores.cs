@@ -36,7 +36,7 @@ namespace Liga.FormUI.Forms
                 {
                     NombreCompleto = nombreCompleto,
                     Pais = _jugadores.ToArray()[i].Nacionalidad,
-                    Posicion = _jugadores.ToArray()[i].PosicionId.ToString()
+                    Posicion = _jugadores.ToArray()[i].Posicion
                 };
             }
 

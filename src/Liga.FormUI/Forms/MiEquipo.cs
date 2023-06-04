@@ -44,11 +44,19 @@ namespace Liga.FormUI.Forms
                 var nombreCompleto = $"{_jugadores.ToArray()[i].Nombre} {_jugadores.ToArray()[i].Apellidos}";
                 jugadorItems[i] = new JugadorItem
                 {
+                    Id = _jugadores.ToArray()[i].Id,
                     NombreCompleto = nombreCompleto,
+                    Nombre = _jugadores.ToArray()[i].Nombre,
+                    Apellidos = _jugadores.ToArray()[i].Apellidos,
+                    Dorsal = _jugadores.ToArray()[i].Dorsal,
                     Pais = _jugadores.ToArray()[i].Nacionalidad,
-                    Posicion = _jugadores.ToArray()[i].PosicionId.ToString()
+                    Posicion = _jugadores.ToArray()[i].Posicion
                 };
             }
+
+            textBoxPresupuesto.Text = $"{_equipo.Presupuesto.ToString()} €";
+            textBoxEstadio.Text = _equipo.Estadio;
+            textBoxUbicacion.Text = _equipo.Ubicacion;
 
             flowLayoutPanel1.Controls.AddRange(jugadorItems);
         }

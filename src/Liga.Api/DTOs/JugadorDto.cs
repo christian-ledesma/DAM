@@ -1,4 +1,4 @@
-﻿namespace Liga.FormUI.DTOs
+﻿namespace Liga.Api.DTOs
 {
     public class JugadorDto
     {

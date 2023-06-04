@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Liga.FormUI.Services
@@ -31,6 +32,17 @@ namespace Liga.FormUI.Services
 
             var response = JsonConvert.DeserializeObject<IEnumerable<JugadorDto>>(resultContent);
             return response;
+        }
+
+        public async Task UpdateJugador(JugadorUpdateDto dto)
+        {
+            using var client = new HttpClient();
+            client.BaseAddress = new Uri(Constants.API_URL);
+
+            var json = JsonConvert.SerializeObject(dto);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            await client.PutAsync("api/Jugador", data);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Liga.Api.Entities;
+﻿using Liga.Api.DTOs;
+using Liga.Api.Entities;
 using Liga.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -27,9 +28,9 @@ namespace Liga.Api.Controllers
 
         [HttpGet]
         [Route("ByTeam/{teamId}")]
-        public async Task<IActionResult> GetById(int teamId)
+        public async Task<IActionResult> GetByTeam(int teamId)
         {
-            var jugadores = await _jugadorService.GetAllPlayersById(teamId);
+            var jugadores = await _jugadorService.GetPlayersInTeam(teamId);
             return Ok(jugadores);
         }
 
@@ -50,7 +51,7 @@ namespace Liga.Api.Controllers
         }
 
         [HttpPut]
-        public async Task<object> Put([FromBody] Jugador jugador)
+        public async Task<object> Put([FromBody] JugadorUpdateDto jugador)
         {
             try
             {
