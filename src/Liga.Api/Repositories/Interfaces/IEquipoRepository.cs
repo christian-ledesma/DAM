@@ -8,5 +8,6 @@ namespace Liga.Api.Repositories.Interfaces
     {
         Task<IEnumerable<Equipo>> GetList();
         Task<Equipo> GetByEntrenador(int entrenadorId);
+        Task<Equipo> FindAsync(int equipoId);
     }
 }

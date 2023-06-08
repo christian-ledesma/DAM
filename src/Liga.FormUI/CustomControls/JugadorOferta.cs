@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Liga.FormUI.Modals;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,26 @@ namespace Liga.FormUI.CustomControls
             InitializeComponent();
         }
 
+        private int _jugadorId;
         private string _nombreCompleto;
         private string _pais;
         private string _posicion;
         private Image _image;
 
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            using var dialog = new OfferJugadorDialog();
+            dialog.EquipoId = 1;
+            dialog.JugadorId = _jugadorId;
+            dialog.ShowDialog();
+        }
+
+        [Category("Custom Props")]
+        public int JugadorId
+        {
+            get { return _jugadorId; }
+            set { _jugadorId = value; }
+        }
         [Category("Custom Props")]
         public string NombreCompleto
         {

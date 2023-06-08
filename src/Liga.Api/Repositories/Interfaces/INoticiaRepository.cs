@@ -6,6 +6,7 @@ namespace Liga.Api.Repositories.Interfaces
 {
     public interface INoticiaRepository
     {
+        Task CreateAsync(Noticia entity);
         Task<IEnumerable<Noticia>> GetListAsync();
     }
 }

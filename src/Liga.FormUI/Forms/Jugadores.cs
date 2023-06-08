@@ -34,6 +34,7 @@ namespace Liga.FormUI.Forms
                 var nombreCompleto = $"{_jugadores.ToArray()[i].Nombre} {_jugadores.ToArray()[i].Apellidos}";
                 jugadorItems[i] = new JugadorOferta
                 {
+                    JugadorId = _jugadores.ToArray()[i].Id,
                     NombreCompleto = nombreCompleto,
                     Pais = _jugadores.ToArray()[i].Nacionalidad,
                     Posicion = _jugadores.ToArray()[i].Posicion
